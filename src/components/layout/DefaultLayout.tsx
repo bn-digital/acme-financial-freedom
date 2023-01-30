@@ -26,7 +26,7 @@ const DefaultLayout: FC = () => {
       }}
     >
       <Layout>
-          {currentUrl !== '/pdf-report' && <Header />}
+           <Header />
             <Suspense fallback={<Spin />}>
               <Outlet />
             </Suspense>

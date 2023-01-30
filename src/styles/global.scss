@@ -1,14 +1,16 @@
-@font-face {
-    font-family: "DrukWideWeb";
-    src: url("fonts/DrukWide-Medium-Trial.otf") format("opentype");
-}
+@import 'src/styles/vars';
 .ant-layout {
     background: none;
     width: 100%;
+    max-width: 100vw;
+
 }
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
 }
 button.ant-btn-text {
@@ -33,15 +35,39 @@ button.ant-btn-ghost {
     }
 }
 button.ant-btn-primary {
-    border: 1px solid #5c5c5c;
-    background-color: #5c5c5c;
+    height: 60px;
+    border: 1px solid $primary-red;
+    background-color: $primary-red;
+    padding: 16px 32px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     &:hover {
-        border: 1px solid #5c5c5c;
-        background-color: #4b4b4b !important;
+        border: 1px solid $primary-red;
+        background-color: $primary-red !important;
     }
     &:focus {
-        border: none;
-        background-color:  #4b4b4b !important;
+        border: $primary-red;
+        background-color:  $primary-red !important;
         outline: none;
     }
+    span {
+        font-size: 20px;
+        line-height: 20px;
+        margin-left: 12px;
+    }
+}
+h1.ant-typography {
+    font-size: 96px;
+    font-family: $hero-font-family;
+}
+h2.ant-typography {
+    font-size: 32px;
+    font-family: $hero-font-family;
+}
+h3.ant-typography {
+    font-size: 32px;
+    font-family: $hero-font-family;
 }
