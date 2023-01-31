@@ -1,0 +1,118 @@
+@import 'src/styles/vars';
+
+.specialization {
+  min-height: 100vh;
+  padding: 130px 0 50px 0;
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 50px;
+    margin: 220px 0 300px 0;
+
+    .slider-box {
+      position: relative;
+      width: 600px;
+      height: 430px;
+
+      .slick-slide {
+        .image-slide {
+          height: 430px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+        }
+      }
+
+      .frame-wrapper {
+        z-index: -1;
+        position: absolute;
+        left: 200px;
+        top: -110px;
+        width: 570px;
+        height: 710px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+      }
+      .counter-box {
+        margin-top: 120px;
+        .current-slide {
+          color: $primary-red;
+          font-size: 64px;
+          font-family: $hero-font-family;
+        }
+        .total-slides {
+          font-weight: 700;
+          font-size: 36px;
+          font-family: $hero-font-family;
+
+        }
+      }
+
+    }
+
+    .content {
+      .slider-controls {
+        display: flex;
+        margin-bottom: 50px;
+        .arrow-wrapper {
+          cursor: pointer;
+          margin-right: 20px;
+          &.disabled-left, &.disabled-right {
+            cursor: unset;
+            svg {
+              path {
+                fill: #d9d9d9;
+              }
+            }
+          }
+        }
+      }
+
+      .title-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .subtitle {
+          margin-left: 12px;
+          font-family: $hero-font-family;
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+      .description {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .btn-box {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  .section-divider {
+    position: relative;
+    height: 5px;
+    background-color: #dcdcdc;
+
+    .stripe {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 10px;
+      width: 200px;
+      background-color: $primary-red;
+    }
+  }
+}

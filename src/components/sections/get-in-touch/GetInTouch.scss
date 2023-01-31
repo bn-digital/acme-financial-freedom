@@ -1,0 +1,23 @@
+.get-in-touch {
+  min-height: 900px;
+  padding: 120px 0 120px 200px;
+  .in-touch-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    .in-touch-form {
+
+
+      .red-square {
+
+      }
+      .form-item-container {
+
+      }
+    }
+    .map-wrapper {
+      width: 100%;
+      height: 600px;
+    }
+  }
+}
