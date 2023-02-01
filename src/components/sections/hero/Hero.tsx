@@ -31,7 +31,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="down-btn-wrapper">
-                    <a href="#welcome">
+                    <a href="/acme-financial-freedom/#welcome">
                     <Button onClick={onScrollDown} className={'scroll-down-btn'} type={'text'} icon={<SvgIcon type={'arrow-scroll'} />}>{'Scroll Down'}</Button>
                     </a>
                 </div>
