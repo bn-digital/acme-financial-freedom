@@ -7,8 +7,8 @@ import picture from './images/welcome-picture.png'
 const {Title, Paragraph} = Typography
 const Welcome = () => {
     return (
-        <div className={'welcome'}>
-            <div className="container" id={'welcome'}>
+        <div className={'welcome'} id={'welcome'}>
+            <div className="container" >
                 <div className="welcome-content">
                     <div className="left-block">
                         <Title level={3}

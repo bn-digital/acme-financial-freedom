@@ -1,23 +1,70 @@
+@import 'src/styles/vars';
+
 .get-in-touch {
   min-height: 900px;
   padding: 120px 0 120px 200px;
+
   .in-touch-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    .in-touch-form {
 
+    .in-touch-form {
+      .title-box {
+        margin-bottom: 80px;
+      }
 
       .red-square {
-
+        width: 24px;
+        height: 24px;
+        background-color: $primary-red;
       }
-      .form-item-container {
 
+      .form-item-container {
+        border-bottom: 1px solid #333333;
+        margin-bottom: 40px;
+
+        input {
+          font-size: 20px;
+          padding-bottom: 10px;
+
+
+          &::placeholder {
+            color: #333333;
+            font-size: 20px;
+          }
+        }
+
+        textarea {
+          resize: none;
+          font-size: 20px;
+
+          &::placeholder {
+            color: #333333;
+            font-size: 20px;
+          }
+        }
+      }
+      .btn-container {
+        margin-top: 80px;
+        button.ant-btn {
+          min-width: 200px;
+        }
       }
     }
+
     .map-wrapper {
       width: 100%;
-      height: 600px;
+      height: 670px;
+      background-color: #969696;
+    }
+    .map-error-container {
+      background-color: #e7e7e7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
     }
   }
 }

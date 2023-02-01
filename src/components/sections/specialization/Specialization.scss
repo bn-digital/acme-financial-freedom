@@ -108,11 +108,12 @@
     .stripe {
       position: absolute;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      top: -3px;
       height: 10px;
-      width: 200px;
+      width: 16.666%;
       background-color: $primary-red;
+      transition: all 0.1s ease-in-out;
+
     }
   }
 }

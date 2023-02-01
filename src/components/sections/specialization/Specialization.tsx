@@ -17,26 +17,38 @@ const {Title, Text, Paragraph} = Typography
 const slides = [
     {
         key: '1',
+        name: 'Apartments',
+        description: 'Large, high demand apartment complexes. Big buildings, big returns.',
         image: slide01
     },
     {
         key: '2',
+        name: 'Business centers',
+        description: 'Large, high demand business centers. Big buildings, big returns.',
         image: slide02
     },
     {
         key: '3',
+        name: 'Multifunction complexes',
+        description: 'Large, high demand multifunction complexes. Big buildings, big returns.',
         image: slide03
     },
     {
         key: '4',
+        name: 'Sport clubs',
+        description: 'Large, high demand Sport clubs. Big buildings, big returns.',
         image: slide04
     },
     {
         key: '5',
+        name: 'Private real estate',
+        description: 'Large, high demand private buildings. Big buildings, big returns.',
         image: slide05
     },
     {
         key: '6',
+        name: 'Parking hubs',
+        description: 'Parking hubs. Large, high demand parking hubs. Big buildings, big returns.',
         image: slide06
     },
 ]
@@ -57,10 +69,8 @@ const Specialization = () => {
         slidesToScroll: 1,
         accessibility: true,
         afterChange(currentSlide: number) {
-            console.log(currentSlide)
             setCurrentSlideNumber(currentSlide+1)
         }
-
     };
     const classesL = classNames({
         "arrow-wrapper": true,
@@ -69,9 +79,12 @@ const Specialization = () => {
     })
     const classesR = classNames({
         "arrow-wrapper": true,
-
         "disabled-right": currentSlideNumber === slides.length
     })
+    const currentSpecialization = slides.find(it=>it?.key === currentSlideNumber.toString())
+    const stripeStyles = {
+        transform: `translateX(${(currentSlideNumber-1) * 200}px)`
+    }
     return (
         <div className={'specialization'}>
             <div className="container">
@@ -106,20 +119,18 @@ const Specialization = () => {
                         </div>
                         <div className="title-box">
                             <SvgIcon type={'building'}/>
-                            <Text className={'subtitle'}>{'Apartments'}</Text>
+                            <Text className={'subtitle'}>{currentSpecialization?.name}</Text>
                         </div>
-                        <Paragraph className={'description'}>{'Large, high demand apartment complexes. \n' +
-                        'Big buildings, big returns.'}</Paragraph>
+                        <Paragraph className={'description'}>{currentSpecialization?.description}</Paragraph>
                         <div className="btn-box">
                             <Button type={'primary'}>{'Join the Investors Club'}</Button>
                         </div>
                     </div>
                 </div>
                 <div className="section-divider">
-                    <div className="stripe"/>
+                    <div className="stripe" style={stripeStyles}/>
                 </div>
             </div>
-
         </div>
     );
 };
